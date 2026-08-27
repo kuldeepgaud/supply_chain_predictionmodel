@@ -22,7 +22,7 @@ def preprocessing(df):
     df = df.drop_duplicates()
 
     # 3. Define X and y
-    X = df.drop(columns=['product_wg_ton','Ware_house_ID','WH_Manager_ID'])
+    X = df.drop(columns=['product_wg_ton','Ware_house_ID','WH_Manager_ID','wh_est_year'])
     logging.info(f'=======dropped unwanted columns:{X.shape}=======')
     y = df['product_wg_ton']
     logging.info(f'======seprated y target column:{y.shape}========')
