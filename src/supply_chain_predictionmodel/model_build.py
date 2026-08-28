@@ -28,7 +28,7 @@ def model_build(X_train, X_test, y_train, y_test, Transformer):
         # Create Random Forest Regressor
         model = RandomForestRegressor(
             n_estimators=300,
-            max_depth=3,
+            max_depth=None,
             random_state=42)
 
         logging.info(
