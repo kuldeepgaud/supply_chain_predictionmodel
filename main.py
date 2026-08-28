@@ -13,9 +13,9 @@ def main():
     df = load_data()
     print(df.shape)
 
-    X_train,X_test,y_train,y_test,preprocessor = preprocessing(df)
+    X_train,X_test,y_train,y_test,Transformer = preprocessing(df)
     print(X_train.shape,y_train.shape)
-    report_score = model_build(X_train,X_test,y_train,y_test,preprocessor)
+    report_score = model_build(X_train, X_test, y_train, y_test, Transformer)
     print(report_score)
     logging.info("========== ORCHESTRATOR EXECUTION COMPLETED SUCCESSFULLY ==========")
 

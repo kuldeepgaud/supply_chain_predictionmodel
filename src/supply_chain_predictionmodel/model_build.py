@@ -13,7 +13,7 @@ import os
 import pickle
 
 
-def model_build(X_train, X_test, y_train, y_test, preprocessor):
+def model_build(X_train, X_test, y_train, y_test, Transformer):
 
     logging.info("========== MODEL BUILDING STARTED ==========")
 
@@ -27,7 +27,7 @@ def model_build(X_train, X_test, y_train, y_test, preprocessor):
 
         # Create Random Forest Regressor
         model = RandomForestRegressor(
-            n_estimators=100,
+            n_estimators=300,
             max_depth=3,
             random_state=42)
 

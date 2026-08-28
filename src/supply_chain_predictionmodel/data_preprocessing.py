@@ -58,18 +58,18 @@ def preprocessing(df):
 
     # 8. Create ColumnTransformer
     logging.info('========transformer created=========')
-    preprocessor = ColumnTransformer([
+    Transformer = ColumnTransformer([
         ('num', numerical_pipeline, numerical_data),
         ('cat', categorical_pipeline, categorical_data)
     ])
 
     # 9. Fit and transform training data
     logging.info("===Fitting preprocessor on training data and transforming X_train===")
-    X_train_processed = preprocessor.fit_transform(X_train)
+    X_train_processed = Transformer.fit_transform(X_train)
 
     # 10. Transform test data
     logging.info("===Transforming X_test using the fitted preprocessor===")
-    X_test_processed = preprocessor.transform(X_test)
+    X_test_processed = Transformer.transform(X_test)
 
     logging.info(
     "Preprocessing completed successfully. X_train: %s, X_test: %s, "
@@ -79,6 +79,6 @@ def preprocessing(df):
     y_train.shape,
     y_test.shape
 )
-    return (X_train_processed,X_test_processed,y_train, y_test,preprocessor)
+    return (X_train_processed,X_test_processed,y_train, y_test,Transformer)
 
 

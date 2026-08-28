@@ -2,6 +2,7 @@
 import pandas as pd 
 import logging
 from pathlib import Path
+
 # load the preprocessed dataset
 def load_data():
     logging.info('=====data ingestion started======')
