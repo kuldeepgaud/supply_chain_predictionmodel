@@ -103,8 +103,8 @@ Saved Model
 
 The project uses a **Random Forest Regressor** with:
 
-* 100 estimators
-* Maximum depth of 3
+* 300 estimators
+* Maximum depth of None
 * Random state of 42
 
 The model is evaluated using:
